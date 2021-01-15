@@ -1,8 +1,6 @@
 def clr(area):
     a = "\n" * area
     print(a, a)  # x2
-
-
 def find_divs(i):
     a = [
         [d] if d ** 2 == i
@@ -14,8 +12,6 @@ def find_divs(i):
     for j in a:
         new_a += j
     return sorted(new_a)
-
-
 def find_simple_d(i: int):
     a = find_divs(i)
     j = (j for j in a if len(find_divs(j)) == 2)
@@ -25,16 +21,12 @@ def find_simple_d(i: int):
         except:
             break
     print("\n")
-
-
 def main_help():
     print(
         " 1. Finder\n"
         " 2. RangeR\n\n\n"
         "\u2192", end=" "
     )
-
-
 def main():
     main_help()
     choice = 1
@@ -55,8 +47,6 @@ def main():
             clr(10)
             main_help()
     return choice
-
-
 def answ(choice: int):
     clr(40)
     if choice == 1:
@@ -77,8 +67,6 @@ def answ(choice: int):
         ))
         clr(4)
         return [a, b]
-
-
 def ranger_main(answ: int):
     if answ == 1:
         clr(4)
@@ -156,10 +144,6 @@ def ranger_job(what_to_do, optional, answer):
         ranger_find_sqrt(optional, a, b)
     elif what_to_do == 3:
         ranger_find_for_division(optional, a,b)
-
-a = 2002002002
-b = 2002002002
-i = 2002002002
 clr(40)
 while True:
     choice = main()
